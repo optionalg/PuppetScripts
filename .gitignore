@@ -1,0 +1,2 @@
+# we don't want this file ever to go public
+modules/git-server/files/id_rsa
