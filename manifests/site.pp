@@ -8,6 +8,7 @@ if versioncmp($::puppetversion,'3.6.1') >= 0 {
 }
 
 
-node 'demo' {
+node 'git-master' {
   include nginx
+  include git-server
 }
