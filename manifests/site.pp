@@ -12,3 +12,7 @@ node 'git-master' {
   include nginx
   include git-server
 }
+
+node 'git-demo2' {
+  include puppet-mgr
+}
