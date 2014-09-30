@@ -11,6 +11,9 @@ if versioncmp($::puppetversion,'3.6.1') >= 0 {
 node 'git-master' {
   include nginx
   include git-server
+  nginx::vhost {'test-local':
+    site_domain => 'test.local',
+  }
 }
 
 node 'git-demo2' {
