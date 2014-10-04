@@ -14,6 +14,7 @@ node 'git-master' {
   include git-server
   nginx::vhost {'test-local':
     site_domain => 'test.local',
+    site_aliases => ['sub1.test.local','sub2.test.local'],
   }
 }
 

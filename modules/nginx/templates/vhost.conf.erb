@@ -1,6 +1,6 @@
 server {
   listen 80;
   root /usr/share/nginx/html/<%= @site_name %>;
-  server_name <%= @site_domain %>;
+  server_name <%= @site_domain %> <%= @site_aliases.join(" ") %>;
 }
 
