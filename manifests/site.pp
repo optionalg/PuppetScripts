@@ -10,6 +10,7 @@ if versioncmp($::puppetversion,'3.6.1') >= 0 {
 
 node 'git-master' {
   include nginx
+  include ntp
   include git-server
   nginx::vhost {'test-local':
     site_domain => 'test.local',
@@ -18,4 +19,5 @@ node 'git-master' {
 
 node 'git-demo2' {
   include puppet-mgr
+  include ntp
 }
