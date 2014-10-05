@@ -5,10 +5,10 @@
 # des_key defaults to the default string which won't be accepted
 
 class roundcubemail (
+    $product_name = 'Roundcube Webmail',
     $dbstring = '',
     $des_key = 'rcmail-!24ByteDESkey*Str') {
 
-  $product_name = $name
 
   package {'roundcubemail':
     ensure => installed,
