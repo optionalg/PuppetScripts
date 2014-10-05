@@ -9,6 +9,7 @@ if versioncmp($::puppetversion,'3.6.1') >= 0 {
 
 
 node 'git-master' {
+  include default-packages
   include nginx
   include ntp
   include git-server
@@ -19,6 +20,7 @@ node 'git-master' {
 }
 
 node 'git-demo2' {
+  include default-packages
   include puppet-mgr
   include ntp
 }
