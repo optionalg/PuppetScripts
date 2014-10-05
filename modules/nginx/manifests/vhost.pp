@@ -7,11 +7,6 @@ define nginx::vhost($site_domain,$site_aliases = []) {
     content => template('nginx/vhost.conf.erb'),
     notify => Service['nginx'],
   }
-  file{"/var/www/":
-    ensure=>'directory',
-    owner=>'root',
-    group=>'root',
-  }
   file{"/var/www/${site_name}":
     ensure=>'directory',
   }
